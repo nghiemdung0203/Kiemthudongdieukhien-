@@ -1,11 +1,11 @@
-export function DanhGia(diemTongKet, hanhKiem) {
-    let result                    //1
-        if (diemTongKet >= 8.0 && hanhKiem == 'Tốt')         //2
-            result = 'hocSinhGioi'                      //3
-        else if (diemTongKet >= 6.5 && hanhKiem == 'Tốt')    //4
-            result = 'hocSinhTienTien'                  //5
-        else if (diemTongKet >= 6.5 && hanhKiem == 'Khá')    //6
-            result = 'hocSinhTienTien'                  //7
-        else result =  'hocSinhTrungBinh'               //8
-    return result                                       //9
+export function XepLoaiSanPham(gia_ban, danh_gia_nguoi_dung) {
+    let result                    
+        if (gia_ban >= 500000 && danh_gia_nguoi_dung == 'Rất Tốt' || gia_ban >= 500000 && danh_gia_nguoi_dung == 'Tốt' )       
+            result = 'sanPhamCaoCap'                     
+        else if (gia_ban >= 200000 && gia_ban < 500000 && danh_gia_nguoi_dung == 'Rất Tốt' || gia_ban >= 200000 && gia_ban < 500000 && danh_gia_nguoi_dung == 'Tốt') 
+            result = 'sanPhamTrungBinh'                  
+        else if (gia_ban >= 200000 && gia_ban < 500000 && danh_gia_nguoi_dung == 'Trung bình')   
+            result = 'sanPhamGiaRe'                  
+        else result =  'sanPhamKhongDuocDanhGiaCao'               
+    return result                                      
 }
